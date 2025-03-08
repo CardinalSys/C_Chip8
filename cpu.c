@@ -48,10 +48,9 @@ void LoadFont();
 void ExecuteInstruction(int opcode);
 
 int GetCurrentInstruction() {
-    unsigned char firstInstruction = memory[pc];       // Asegúrate de usar unsigned char
-    unsigned char secondInstruction = memory[pc + 1];  // Asegúrate de usar unsigned char
+    unsigned char firstInstruction = memory[pc];
+    unsigned char secondInstruction = memory[pc + 1];
 
-    // Combinar ambos bytes en un opcode de 16 bits
     int opcode = (firstInstruction << 8) | secondInstruction;
 
     return opcode;
